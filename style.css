@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300&family=Rubik+Iso&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Rubik";
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+body {
+  background-color: black;
+  widows: 100%;
+  height: 100vh;
+  padding: 1rem 6rem;
+  color: white;
+  overflow-x: hidden;
+}
+body header {
+  position: relative;
+  width: 100%;
+  background-color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-image: url(./home\ image.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+body header nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 0 6rem;
+  top: 0;
+  left: 0;
+  background-color: #121212;
+  z-index: 999;
+}
+body header nav .logo {
+  color: white;
+}
+body header nav .logo h1 {
+  font-size: 3rem;
+}
+body header nav .logo h1::first-letter {
+  color: #ff004d;
+}
+body header nav .navigation {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body header nav .navigation ul {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+body header nav .navigation ul li {
+  list-style: none;
+}
+body header nav .navigation ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+body header nav .navigation ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #ff004d;
+  transition: 0.3s ease;
+}
+body header nav .navigation ul li a:hover:after {
+  width: 100%;
+}
+body header section {
+  width: 100%;
+  padding: 10rem 0;
+}
+body header section h1 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+body header section p {
+  font-size: 5rem;
+}
+body header section p span {
+  color: #ff004d;
+}
+body .about {
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+  transform: translateX(-200%);
+  transition: 2s;
+}
+body .about .image {
+  width: 400px;
+  min-height: 500px;
+  border-radius: 8px;
+}
+body .about .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+body .about .info {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body .about .info h1 {
+  font-size: 3.5rem;
+}
+body .about .info p {
+  font-size: 1.2rem;
+}
+body .about .info .skills {
+  display: flex;
+  gap: 2rem;
+  cursor: pointer;
+}
+body .about .info .skills > a {
+  font-size: 1.2rem;
+  position: relative;
+}
+body .about .info .skills > a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #ff004d;
+  transition: 0.3s ease;
+}
+body .about .info .skills > a:hover:after {
+  width: 100%;
+}
+body .about .info .skills .active {
+  border-bottom: 2px solid red;
+}
+body .about .info .skills-desc {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+body .about .info .skills-desc .description {
+  display: none;
+  transition: all 3s;
+}
+body .about .info .skills-desc .description .header {
+  padding-bottom: 0.5rem;
+}
+body .about .info .skills-desc .description .header p {
+  color: #ff004d;
+}
+body .about .info .skills-desc .description .details {
+  margin-bottom: 1rem;
+}
+body .about .info .skills-desc .description.skill-desc {
+  display: block;
+}
+body .my-work {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.3s ease;
+  padding: 3rem 0;
+  transform: translateX(200%);
+  transition: 2s;
+}
+body .my-work h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+body .my-work .project {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3rem;
+  transition: 2s ease;
+}
+body .my-work .project a {
+  text-decoration: none;
+  color: white;
+}
+body .my-work .project .project1-details {
+  position: relative;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-image: url(./man-library-with-tablet_1134-234.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 3s ease;
+}
+body .my-work .project .project1-details:nth-child(n+4) {
+  opacity: 0;
+  display: none;
+}
+body .my-work .project .project1-details:nth-child(2) {
+  background-image: url(./campaign.png);
+}
+body .my-work .project .project1-details:nth-child(3) {
+  background-image: url(./insurance.webp);
+}
+body .my-work .project .project1-details:nth-child(4) {
+  background-image: url(./Leave-Management.jpg);
+}
+body .my-work .project .project1-details:nth-child(5) {
+  background-image: url(./gesture\ control.jpg);
+}
+body .my-work .project .project1-details:nth-child(6) {
+  background-image: url(./512x512bb.jpg);
+}
+body .my-work .project .project1-details .details {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #ff004d;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  bottom: -100%;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+body .my-work .project .project1-details:hover .details {
+  bottom: 0;
+}
+body .my-work button {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 0, 77, 0.5);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+body .my-work button:hover {
+  border: 2px solid #ff004d;
+}
+body .contact {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 0 15rem 0;
+  margin-bottom: 100px;
+  opacity: 0;
+}
+body .contact .contact-option {
+  width: 50%;
+}
+body .contact .contact-option h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+body .contact .contact-option .contact-medias {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+body .contact .contact-option .contact-medias .media {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+body .contact .contact-option .contact-medias .media i {
+  color: #ff004d;
+}
+body .contact .contact-option .contact-medias .media p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+body .contact .contact-option .contact-medias .social-media {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+body .contact .contact-option .contact-medias .social-media .social {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background: rgb(45, 45, 45);
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .contact .contact-option .contact-medias .social-media .social a {
+  text-decoration: none;
+  color: #fff;
+}
+body .contact .contact-option .contact-medias .social-media .social:hover {
+  transform: translateY(-4px);
+  background: #ff004d;
+}
+body .contact .contact-option button {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 0, 77, 0.5);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+body .contact .contact-option button:hover {
+  border: 2px solid #ff004d;
+  background-color: #ff004d;
+}
+body .contact .contact-info {
+  width: 100%;
+}
+body .contact .contact-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+body .contact .contact-info form input,
+body .contact .contact-info form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: rgb(45, 45, 45);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+body .contact .contact-info form button {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 0, 77, 0.5);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+body .contact .contact-info form button:hover {
+  border: 2px solid #ff004d;
+  background-color: #ff004d;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff004d;
+  border-radius: 10px;
+}
+
+.about.show-anime, .my-work.show-anime, .contact.show-anime {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: 1.5s;
+}/*# sourceMappingURL=style.css.map */
