@@ -12,15 +12,14 @@ showButton.addEventListener("click", () => {
 	if (toggle) {
 		showButton.textContent = "Show Less"
 		hiddenDivs.forEach((div) => {
-			div.style.opacity = 1;
-      div.style.display = "block";
+			div.style.height = '450px';
     });
 	}
 	else {
 		showButton.textContent = "Show More"
 		
 		hiddenDivs.forEach((div) => {
-      div.style.display = "none";
+      div.style.height='0px';
     });
 	}
     
@@ -38,21 +37,6 @@ showButton.addEventListener("click", () => {
 		document.body.removeChild(link);
 	});
 
-window.onscroll = () => {
-	
-	sections.forEach(sec => {
-		console.log("started");
-			
-		let top = window.scrollY;
-		let secOffset = sec.offsetTop - 600;
-		let secHeight = sec.offsetHeight;
-		if (top >= secOffset && top < secOffset + secHeight ) {
-			sec.classList.add('show-anime');
-				
-			// p[i].classList.add('active')
-		}
-	})
-}
 
 
 function showDetails(call){

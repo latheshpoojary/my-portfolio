@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lathesh-portfolio </title>
+    <title>lathesh-portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -29,26 +30,21 @@
           </ul>
         </div>
       </nav>
-      <section>
+      <div>
         <h1>Angular Developer</h1>
         <p>Hi,I'm <span>Lathesh</span></p>
         <p>Poojary from Moodubidri</p>
-      </section>
+      </div>
     </header>
 
-    <section class="about" id="about">
-      <div class="image" style="--i:0">
+    <section class="about" id="about" data-aos="fade-right">
+      <div class="image" style="--i: 0">
         <img src="./about image.jpg" alt="" />
       </div>
-      <div class="info" style="--i:3">
+      <div class="info" style="--i: 3">
         <h1>About Me</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dolorem
-          tenetur. Modi ut ad laboriosam natus perspiciatis repellat nesciunt
-          odit doloribus quisquam quidem, quod cumque quasi incidunt ipsum nam
-          quam et mollitia. Iusto molestiae aliquid, tempore tempora eum rerum,
-          ducimus natus ipsum explicabo maxime dignissimos impedit quod minima,
-          fuga vel?
+          passionate about learning new, world-changing technologies, values every moment, quickly grasps challenging concepts, and is adept at building friendly connections with others.
         </p>
         <div class="skills">
           <a onclick="showDetails('skill')" class="skill">Skill</a>
@@ -122,7 +118,7 @@
       </div>
     </section>
 
-    <section class="my-work" id="project">
+    <section class="my-work" id="project" data-aos="fade-left">
       <h1>My Works</h1>
       <div class="project">
         <div class="project1-details">
@@ -139,16 +135,19 @@
           </div>
         </div>
         <div class="project1-details">
-          <div class="details">
-            <h2>Campaign Management System</h2>
-            <p>
-              A campaign management system with CRUD (Create, Read, Update,
-              Delete) functionality allows users to efficiently create, edit,
-              view, and delete marketing campaigns and associated data. This
-              empowers businesses to easily manage and optimize their marketing
-              efforts in real-time.
-            </p>
-          </div>
+          <a href="https://campaign-lathesh.netlify.app/" target="_blank">
+            <div class="details">
+              <h2>Campaign Management System</h2>
+              <p>
+                A campaign management system with CRUD (Create, Read, Update,
+                Delete) functionality allows users to efficiently create, edit,
+                view, and delete marketing campaigns and associated data. This
+                empowers businesses to easily manage and optimize their marketing
+                efforts in real-time.
+              </p>
+            </div>
+          </a>
+          
         </div>
         <div class="project1-details">
           <div class="details">
@@ -164,30 +163,29 @@
         </div>
 
         <div class="project1-details">
-          <div class="details">
-            <h2>Leave Management System</h2>
-            <p>
-              A leave management system is a software tool that facilitates the
-              efficient adding employee tracking, approval, and management of
-              employee leaves, including vacation, sick days, and other types of
-              time off. It simplifies the leave request process, ensuring
-              compliance with company policies and enhancing workforce
-              scheduling.
-            </p>
-          </div>
+          <a href="https://leave-management-system-b6f99.web.app/login" target="_blank">
+            <div class="details">
+              <h2>Leave Management System</h2>
+              <p>
+                A leave management system is a software tool that facilitates the
+                efficient adding employee tracking, approval, and management of
+                employee leaves, including vacation, sick days, and other types of
+                time off. It simplifies the leave request process, ensuring
+                compliance with company policies and enhancing workforce
+                scheduling.
+              </p>
+            </div>
+          </a>
+          
         </div>
-        <div class="project1-details">
-          <a href="https://lathesh-portfolio.netlify.app/">
+        <div class="project1-details" >
+          <a href="https://lathesh-portfolio.netlify.app/" target="_blank">
             <div class="details">
               <h2>Automatic Music Control System using Hand Gestures</h2>
               <p>
                 An automatic music control system using hand gestures is an
                 innovative technology that allows users to interact with music
-                playback by simply moving their hands. It employs cameras to
-                detect hand movements and translates them into actions like
-                changing tracks, adjusting volume, or pausing the music,
-                offering a convenient and immersive way to control the musical
-                experience.
+                playback by simply moving their hands.
               </p>
             </div>
           </a>
@@ -206,7 +204,7 @@
       </div>
       <button id="showButton">See More</button>
     </section>
-    <section class="contact" id="contactinfo">
+    <section class="contact" id="contactinfo" data-aos="fade-up">
       <div class="contact-option">
         <h1>Contact Me</h1>
         <div class="contact-medias">
@@ -220,31 +218,37 @@
           </div>
           <div class="social-media">
             <div class="social instagram">
-							<a href="https://instagram.com/latheshpoojary2639?igshid=YTQwZjQ0NmI0OA==" target="_blank">
-								<i class="fa-brands fa-instagram fa-lg"></i>
-							</a>
-             
+              <a
+                href="https://instagram.com/latheshpoojary2639?igshid=YTQwZjQ0NmI0OA=="
+                target="_blank"
+              >
+                <i class="fa-brands fa-instagram fa-lg"></i>
+              </a>
             </div>
             <div class="social linkedIn">
-							<a href="https://www.linkedin.com/in/lathesh-poojary-192b66232?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-								<i class="fa-brands fa-linkedin-in fa-lg"></i>
-
-							</a>
+              <a
+                href="https://www.linkedin.com/in/lathesh-poojary-192b66232?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin-in fa-lg"></i>
+              </a>
             </div>
             <div class="social whatsapp">
               <i class="fa-brands fa-whatsapp fa-lg"></i>
             </div>
             <div class="social github">
-							<a href="https://github.com/latheshpoojary?tab=repositories" target="_blank">
-								<i class="fa-brands fa-github fa-lg"></i>
-
-							</a>
+              <a
+                href="https://github.com/latheshpoojary?tab=repositories"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github fa-lg"></i>
+              </a>
             </div>
           </div>
         </div>
         <a href="./Lathesh_4AL19IS020_resume (2).pdf" download>
-					<button class="dwnld" id="download">Download CV</button>
-				</a>
+          <button class="dwnld" id="download">Download CV</button>
+        </a>
       </div>
       <div class="contact-info">
         <form action="">
@@ -265,6 +269,10 @@
       src="https://kit.fontawesome.com/3ea046d1cb.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./action.js"></script>
   </body>
 </html>
