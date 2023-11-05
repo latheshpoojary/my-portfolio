@@ -1,6 +1,15 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300&family=Rubik+Iso&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{
+  --dark-mode:#000;
+  --light-mode:#fff;
+  --background:#2d2d2d;
+  font-size: min(2vw,1rem);
+}
+$dark-mode:#000;
+$light-mode:#fff;
+$acent: #ff004d;
 
 * {
   padding: 0;
@@ -11,25 +20,27 @@
   scroll-padding-top: 3rem;
 }
 
-:root{
-  font-size: min(2vw,1rem);
+.toggle-mode{
+  --dark-mode:#fff;
+  --light-mode:#000;
+  --background:#dcdbdb;
+
 }
 
-$acent: #ff004d;
+
+
 body {
-  background-color: black;
+  background-color: var(--dark-mode);
   widows: 100%;
   height: 100vh;
   padding: 1rem 6rem;
-  color: white;
+  color: var(--light-mode);
   overflow-x: hidden;
-
+  transition: all .5s ease;
   header {
     position: relative;
     width: 100%;
-    background-color: black;
     height: fit-content;
-    background-image: url(./home\ image.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -44,10 +55,11 @@ body {
       padding: 0 6rem;
       top: 0;
       left: 0;
-      background-color: #121212;
+      background-color:var(--background);
+      filter: blur(5);
       z-index: 999;
       .logo {
-        color: white;
+        color: var(--light-mode);
         h1 {
           font-size: 3rem;
           &::first-letter {
@@ -57,6 +69,9 @@ body {
       }
       .navigation {
         width: fit-content;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
         ul {
           display: flex;
           font-size: 1.2rem;
@@ -65,9 +80,10 @@ body {
           li {
             list-style: none;
             a {
-              color: #fff;
+              color: var(--light-mode);
               text-decoration: none;
               position: relative;
+              font-weight: 700;
               &::after {
                 content: "";
                 position: absolute;
@@ -84,9 +100,18 @@ body {
             }
           }
         }
+        .mode-chnager{
+          cursor: pointer;
+          .fa-sun:before {
+            color:var(--light-mode);
+          }
+          
+        }
       }
+      
+     
     }
-    div {
+    .intro{
       width: 100%;
       padding: 10rem 0;
       h1 {
@@ -106,7 +131,6 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    justify-content: center;
     gap: 2rem;
     padding: 3rem 0 ;
     transition: 2s;
@@ -200,12 +224,11 @@ body {
       width: 100%;
       display: grid;
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr)) ;
-      justify-content: center;
       gap: 3rem;
       transition: 2s ease;
       a {
         text-decoration: none;
-        color: white;
+        color: var(--light-mode);
       }
       .project1-details {
         position: relative;
@@ -262,23 +285,29 @@ body {
         }
       }
     }
-    button {
-      width: 200px;
-      height: 50px;
-      background-color: transparent;
-      outline: none;
-      border: 2px solid rgba($color: $acent, $alpha: 0.5);
-      color: white;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin: auto;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.4s ease;
-      &:hover {
-        border: 2px solid $acent;
+    .btn{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      button {
+        width: 200px;
+        height: 50px;
+        background-color: transparent;
+        outline: none;
+        border: 2px solid rgba($color: $acent, $alpha: 0.5);
+        color: var(--light-mode);
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: auto;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.4s ease;
+        &:hover {
+          border: 2px solid $acent;
+        }
       }
     }
+ 
   }
 
   .contact {
@@ -321,11 +350,11 @@ body {
             border-radius: 50%;
             display: grid;
             place-content: center;
-            background: rgb(45, 45, 45);
+            background: var(--background);
             cursor: pointer;
             a{
               text-decoration: none;
-              color: #fff;
+              color: var(--light-mode);
             }
             transition: 0.3s;
             &:hover {
@@ -341,7 +370,7 @@ body {
         background-color: transparent;
         outline: none;
         border: 2px solid rgba($color: $acent, $alpha: 0.5);
-        color: white;
+        color: var(--light-mode);
         font-size: 1.1rem;
         font-weight: 700;
         margin: auto;
@@ -366,11 +395,11 @@ body {
           width: 100%;
           padding: 1rem;
           font-size: 1.1rem;
-          background: rgb(45, 45, 45);
+          background: var(--background);
           outline: none;
           border: none;
           border-radius: 5px;
-          color: #fff;
+          color: var(--light-mode);
         }
 
         button {
@@ -379,7 +408,7 @@ body {
           background-color: transparent;
           outline: none;
           border: 2px solid rgba($color: $acent, $alpha: 0.5);
-          color: white;
+          color: var(--light-mode);
           font-size: 1.1rem;
           font-weight: 700;
           margin: auto;
@@ -400,7 +429,7 @@ body {
 
 }
 ::-webkit-scrollbar-track{
-  background-color: white;
+  background-color: var(--light-mode);
 }
 ::-webkit-scrollbar-thumb{
   background: $acent;

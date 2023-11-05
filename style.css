@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300&family=Rubik+Iso&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+:root {
+  --dark-mode:#000;
+  --light-mode:#fff;
+  --background:#2d2d2d;
+  font-size: min(2vw, 1rem);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -8,25 +15,26 @@
   scroll-padding-top: 3rem;
 }
 
-:root {
-  font-size: min(2vw, 1rem);
+.toggle-mode {
+  --dark-mode:#fff;
+  --light-mode:#000;
+  --background:#dcdbdb;
 }
 
 body {
-  background-color: black;
+  background-color: var(--dark-mode);
   widows: 100%;
   height: 100vh;
   padding: 1rem 6rem;
-  color: white;
+  color: var(--light-mode);
   overflow-x: hidden;
+  transition: all 0.5s ease;
 }
 body header {
   position: relative;
   width: 100%;
-  background-color: black;
   height: -moz-fit-content;
   height: fit-content;
-  background-image: url(./home\ image.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -43,11 +51,12 @@ body header nav {
   padding: 0 6rem;
   top: 0;
   left: 0;
-  background-color: #121212;
+  background-color: var(--background);
+  filter: blur(5);
   z-index: 999;
 }
 body header nav .logo {
-  color: white;
+  color: var(--light-mode);
 }
 body header nav .logo h1 {
   font-size: 3rem;
@@ -58,6 +67,9 @@ body header nav .logo h1::first-letter {
 body header nav .navigation {
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 body header nav .navigation ul {
   display: flex;
@@ -69,9 +81,10 @@ body header nav .navigation ul li {
   list-style: none;
 }
 body header nav .navigation ul li a {
-  color: #fff;
+  color: var(--light-mode);
   text-decoration: none;
   position: relative;
+  font-weight: 700;
 }
 body header nav .navigation ul li a::after {
   content: "";
@@ -86,25 +99,30 @@ body header nav .navigation ul li a::after {
 body header nav .navigation ul li a:hover:after {
   width: 100%;
 }
-body header div {
+body header nav .navigation .mode-chnager {
+  cursor: pointer;
+}
+body header nav .navigation .mode-chnager .fa-sun:before {
+  color: var(--light-mode);
+}
+body header .intro {
   width: 100%;
   padding: 10rem 0;
 }
-body header div h1 {
+body header .intro h1 {
   font-size: 2rem;
   padding-bottom: 1rem;
 }
-body header div p {
+body header .intro p {
   font-size: 5rem;
 }
-body header div p span {
+body header .intro p span {
   color: #ff004d;
 }
 body .about {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: center;
   gap: 2rem;
   padding: 3rem 0;
   transition: 2s;
@@ -193,13 +211,12 @@ body .my-work .project {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-content: center;
   gap: 3rem;
   transition: 2s ease;
 }
 body .my-work .project a {
   text-decoration: none;
-  color: white;
+  color: var(--light-mode);
 }
 body .my-work .project .project1-details {
   position: relative;
@@ -252,13 +269,18 @@ body .my-work .project .project1-details .details {
 body .my-work .project .project1-details:hover .details {
   bottom: 0;
 }
-body .my-work button {
+body .my-work .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body .my-work .btn button {
   width: 200px;
   height: 50px;
   background-color: transparent;
   outline: none;
   border: 2px solid rgba(255, 0, 77, 0.5);
-  color: white;
+  color: var(--light-mode);
   font-size: 1.1rem;
   font-weight: 700;
   margin: auto;
@@ -266,7 +288,7 @@ body .my-work button {
   cursor: pointer;
   transition: 0.4s ease;
 }
-body .my-work button:hover {
+body .my-work .btn button:hover {
   border: 2px solid #ff004d;
 }
 body .contact {
@@ -312,13 +334,13 @@ body .contact .contact-option .contact-medias .social-media .social {
   border-radius: 50%;
   display: grid;
   place-content: center;
-  background: rgb(45, 45, 45);
+  background: var(--background);
   cursor: pointer;
   transition: 0.3s;
 }
 body .contact .contact-option .contact-medias .social-media .social a {
   text-decoration: none;
-  color: #fff;
+  color: var(--light-mode);
 }
 body .contact .contact-option .contact-medias .social-media .social:hover {
   transform: translateY(-4px);
@@ -330,7 +352,7 @@ body .contact .contact-option button {
   background-color: transparent;
   outline: none;
   border: 2px solid rgba(255, 0, 77, 0.5);
-  color: white;
+  color: var(--light-mode);
   font-size: 1.1rem;
   font-weight: 700;
   margin: auto;
@@ -355,11 +377,11 @@ body .contact .contact-info form textarea {
   width: 100%;
   padding: 1rem;
   font-size: 1.1rem;
-  background: rgb(45, 45, 45);
+  background: var(--background);
   outline: none;
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: var(--light-mode);
 }
 body .contact .contact-info form button {
   width: 200px;
@@ -367,7 +389,7 @@ body .contact .contact-info form button {
   background-color: transparent;
   outline: none;
   border: 2px solid rgba(255, 0, 77, 0.5);
-  color: white;
+  color: var(--light-mode);
   font-size: 1.1rem;
   font-weight: 700;
   margin: auto;
@@ -385,7 +407,7 @@ body .contact .contact-info form button:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: white;
+  background-color: var(--light-mode);
 }
 
 ::-webkit-scrollbar-thumb {

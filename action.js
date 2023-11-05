@@ -3,8 +3,13 @@ const education = document.querySelector('.education-desc');
 const certificate = document.querySelector('.certificate-desc');
 const showButton = document.getElementById("showButton");
 const parent = document.querySelector(".project");
+const toggle_mode = document.getElementById('toggle-mode');
 let toggle = false;
 let sections = document.querySelectorAll('section');
+
+
+localStorage.getItem('toggle-mode') && document.body.classList.add('toggle-mode');
+
 
 showButton.addEventListener("click", () => {
 	toggle = !toggle;
@@ -38,6 +43,18 @@ showButton.addEventListener("click", () => {
 	});
 
 
+toggle_mode.addEventListener('click', () => {
+	console.log("clicked");
+	if (document.body.classList.contains('toggle-mode')) {
+		document.body.classList.remove('toggle-mode');
+		localStorage.removeItem('toggle-mode');
+
+	}
+	else {
+	document.body.classList.add('toggle-mode');
+		localStorage.setItem('toggle-mode', 'light-mode');
+	}
+})
 
 function showDetails(call){
 	if (call === 'skill') {
