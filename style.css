@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300&family=Rubik+Iso&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 :root {
-  --dark-mode:#000;
-  --light-mode:#fff;
-  --background:#2d2d2d;
+  --dark-mode: #000;
+  --light-mode: #fff;
+  --background: #2d2d2d;
   font-size: min(2vw, 1rem);
 }
 
@@ -16,14 +16,14 @@
 }
 
 .toggle-mode {
-  --dark-mode:#fff;
-  --light-mode:#000;
-  --background:#dcdbdb;
+  --dark-mode: #fff;
+  --light-mode: #000;
+  --background: #dcdbdb;
 }
 
 body {
   background-color: var(--dark-mode);
-  widows: 100%;
+  width: 100%;
   height: 100vh;
   padding: 1rem 6rem;
   color: var(--light-mode);
@@ -123,6 +123,7 @@ body .about {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   gap: 2rem;
   padding: 3rem 0;
   transition: 2s;
@@ -211,6 +212,7 @@ body .my-work .project {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   gap: 3rem;
   transition: 2s ease;
 }
@@ -293,13 +295,12 @@ body .my-work .btn button:hover {
 }
 body .contact {
   width: 100%;
-  display: flex;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 3rem;
   padding: 3rem 0 15rem 0;
   margin-bottom: 100px;
-}
-body .contact .contact-option {
-  width: 50%;
 }
 body .contact .contact-option h1 {
   font-size: 3.5rem;
@@ -329,8 +330,7 @@ body .contact .contact-option .contact-medias .social-media {
   margin-bottom: 2rem;
 }
 body .contact .contact-option .contact-medias .social-media .social {
-  width: 50px;
-  height: 50px;
+  padding: 1rem;
   border-radius: 50%;
   display: grid;
   place-content: center;
@@ -363,9 +363,6 @@ body .contact .contact-option button {
 body .contact .contact-option button:hover {
   border: 2px solid #ff004d;
   background-color: #ff004d;
-}
-body .contact .contact-info {
-  width: 100%;
 }
 body .contact .contact-info form {
   display: flex;
